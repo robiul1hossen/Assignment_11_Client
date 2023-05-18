@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Login.css";
 import { FaFacebook, FaGithub, FaGoogle, FaLock, FaRegEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import NavigationBar from "../home/NavigationBar/NavigationBar";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const { loginUser } = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
 
@@ -12,6 +13,13 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
+    loginUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+      })
+      .catch((error) => console.log(error));
   };
 
   return (

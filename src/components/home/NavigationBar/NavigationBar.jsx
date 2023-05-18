@@ -1,8 +1,16 @@
-import React from "react";
-import Banner from "../Banner/Banner";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavigationBar = () => {
+  const { logOut, user } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("sign out successfull");
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div>
       <div className="navbar bg-base-100 sticky top-0 z-10">
@@ -55,22 +63,38 @@ const NavigationBar = () => {
             <li tabIndex={0}>
               <Link to="/allToys">All Toys</Link>
             </li>
-            <li>
-              <Link to="/myToys">My Toys</Link>
-            </li>
-            <li>
-              <Link to="/addToy">Add A Toy</Link>
-            </li>
+            {user ? (
+              <li>
+                <Link to="/myToys">My Toys</Link>
+              </li>
+            ) : (
+              ""
+            )}
+            {user ? (
+              <li>
+                <Link to="/addToy">Add A Toy</Link>
+              </li>
+            ) : (
+              ""
+            )}
             <li>
               <Link to="/blog">Blog</Link>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <Link className="btn" to="/login">
-            Login
-          </Link>
-        </div>
+        {user ? (
+          <div className="navbar-end">
+            <Link onClick={handleLogOut} className="btn" to="/login">
+              Log Out
+            </Link>
+          </div>
+        ) : (
+          <div className="navbar-end">
+            <Link className="btn" to="/login">
+              Login
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
