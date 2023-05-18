@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaBeer, FaFacebook, FaGithub, FaGoogle, FaLock, FaRegEnvelope, FaUser } from "react-icons/fa";
 import NavigationBar from "../home/NavigationBar/NavigationBar";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Signup = () => {
+  const user = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
 
@@ -17,7 +19,6 @@ const Signup = () => {
 
   return (
     <>
-      <NavigationBar></NavigationBar>
       <div className="body">
         <div className="container">
           <div className="screen2">

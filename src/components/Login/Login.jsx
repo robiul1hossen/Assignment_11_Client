@@ -16,7 +16,6 @@ const Login = () => {
 
   return (
     <>
-      <NavigationBar></NavigationBar>
       <div className="body">
         <div className="container">
           <div className="screen">
