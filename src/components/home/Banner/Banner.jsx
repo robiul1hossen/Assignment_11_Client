@@ -28,7 +28,10 @@ const Banner = () => {
         </div>
       </div>
       {/* Gallery section */}
-      <div className="cars">
+      <div>
+        <h1 className="font-bold text-7xl text-center mb-10 mt-20">Our toy Gallery</h1>
+      </div>
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <img src="https://i.ibb.co/fXfcWCX/nick-xc-Rt6-KM5s04-unsplash.jpg" alt="" />
         <img src="https://i.ibb.co/T1jtGWq/sandy-millar-nu-S2-GDp-CDo-I-unsplash.jpg" alt="" />
         <img src="https://i.ibb.co/Z8v7Pr6/gimmel-magaway-h-CIPLW9-Cl-Og-unsplash.jpg" alt="" />

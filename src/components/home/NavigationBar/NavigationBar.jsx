@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../Banner/Banner";
+import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   return (
@@ -66,7 +67,9 @@ const NavigationBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <Link to="/login">
+            <a className="btn">Login</a>
+          </Link>
         </div>
       </div>
       <Banner></Banner>
