@@ -3,28 +3,42 @@ import { Link } from "react-router-dom";
 
 const AllCarDetails = ({ toy }) => {
   console.log(toy._id);
-  console.log(toy.car1);
+  const { _id } = toy;
   return (
-    <div className="">
-      <div className="my-6">
-        <img className="w-[600px] h-96" src={toy.img} alt="" />
-        <h2>
-          <b>Toy Name :</b> {toy.subcategory}
-        </h2>
-        <p>
-          <b>Price :</b> ${toy.price}
-        </p>
-        <p>
-          <b>Available Quantity :</b> {toy.available_quantity}
-        </p>
-        <p>
-          <b>Seller :</b> {toy.sellerName}
-        </p>
-        <Link to={`/allToys/${toy._id}`}>
-          <button className="btn btn-outline">View Details</button>
+    <tr>
+      <th>
+        <button onClick={() => handleDelete(_id)} className="btn btn-sm btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </th>
+      <td>
+        <div className="avatar">
+          <div className="rounded w-24 h-24">
+            <img src={toy.img} />
+          </div>
+        </div>
+        <div>
+          <div className="font-bold">Hart Hagerty</div>
+          <div className="text-sm opacity-50">United States</div>
+        </div>
+      </td>
+      <td>{toy.subcategory}</td>
+      <td>{toy.price}</td>
+      <td>{toy.available_quantity}</td>
+      <th>
+        <Link to={`/allToys/${_id}`}>
+          <button className="btn btn-primary btn-md">Details</button>
         </Link>
-      </div>
-    </div>
+      </th>
+    </tr>
   );
 };
 

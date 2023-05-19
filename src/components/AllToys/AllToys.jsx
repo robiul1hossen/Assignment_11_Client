@@ -6,14 +6,28 @@ const AllToys = () => {
   const allToys = useLoaderData();
   console.log(allToys);
   return (
-    <div>
-      <h2>This is all toys </h2>
-      <div className="grid grid-cols-2 gap-5">
+    <table className="table w-full">
+      {/* head */}
+      <thead>
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" className="checkbox" />
+            </label>
+          </th>
+          <th>Image </th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
         {allToys.map((toy) => (
           <AllCarDetails key={toy._id} toy={toy}></AllCarDetails>
         ))}
-      </div>
-    </div>
+      </tbody>
+    </table>
   );
 };
 
