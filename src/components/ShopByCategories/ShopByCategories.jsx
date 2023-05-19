@@ -20,7 +20,7 @@ const ShopByCategories = () => {
         <CategoryShop toy={toy}></CategoryShop>
       ))}
 
-      {/* <Tabs>
+      <Tabs>
         <TabList>
           <Tab>3</Tab>
           <Tab>2</Tab>
@@ -39,7 +39,7 @@ const ShopByCategories = () => {
         <TabPanel>
           <h2>Any content 4</h2>
         </TabPanel>
-      </Tabs> */}
+      </Tabs>
     </div>
   );
 };

@@ -5,23 +5,23 @@ import "react-tabs/style/react-tabs.css";
 const CategoryShop = ({ toy }) => {
   return (
     <div>
-      {console.log(toy)}
+      {/* {console.log(toy)} */}
 
-      <Tabs>
+      {/* <Tabs>
         <TabList>
           <Tab> {toy.name}</Tab>
           <Tab> {toy.name}</Tab>
         </TabList>
 
         <TabPanel>
-          <img className="w-1/2" src="" alt="" />
+          <img className="w-1/2" src={toy.car1.img} alt="" />
           <h3>data coming</h3>
         </TabPanel>
         <TabPanel>
-          <img className="w-1/2" src="" alt="" />
+          <img className="w-1/2" src={toy.car2.img} alt="" />
           <h3>data coming</h3>
         </TabPanel>
-      </Tabs>
+      </Tabs> */}
     </div>
   );
 };

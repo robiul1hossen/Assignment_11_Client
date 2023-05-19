@@ -13,6 +13,7 @@ import MyToys from "./components/MyToys/MyToys.jsx";
 import AddToy from "./AddToy/AddToy.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./components/ProvateRoute/PrivateRoute.jsx";
+import SingleDetails from "./components/SingleDetails/SingleDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <Signup></Signup>,
+      },
+      {
+        path: "allToys/:id",
+        element: <SingleDetails></SingleDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`),
       },
     ],
   },
