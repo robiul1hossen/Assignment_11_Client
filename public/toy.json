@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Super Racer",
+    "car1": {
+      "price": 24.99,
+      "available_quantity": 15,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "Cars",
+      "seller": {
+        "name": "Carland Toys",
+        "email": "carlandtoys@example.com"
+      },
+      "rating": 4.2
+    },
+    "car2": {
+      "price": 24.99,
+      "available_quantity": 15,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "Cars",
+      "seller": {
+        "name": "Carland Toys",
+        "email": "carlandtoys@example.com"
+      },
+      "rating": 4.2
+    },
+    "car3": {
+      "price": 24.99,
+      "available_quantity": 15,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "Cars",
+      "seller": {
+        "name": "Carland Toys",
+        "email": "carlandtoys@example.com"
+      },
+      "rating": 4.2
+    }
+  },
+  {
+    "name": "Turbo Speedster",
+    "car1": {
+      "price": 19.99,
+      "available_quantity": 10,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "RC Cars",
+      "seller": {
+        "name": "Speedy Toys",
+        "email": "speedytoys@example.com"
+      },
+      "rating": 3.8
+    },
+    "car2": {
+      "price": 19.99,
+      "available_quantity": 10,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "RC Cars",
+      "seller": {
+        "name": "Speedy Toys",
+        "email": "speedytoys@example.com"
+      },
+      "rating": 3.8
+    },
+    "car3": {
+      "price": 19.99,
+      "available_quantity": 10,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "RC Cars",
+      "seller": {
+        "name": "Speedy Toys",
+        "email": "speedytoys@example.com"
+      },
+      "rating": 3.8
+    }
+  },
+  {
+    "name": "Monster Crusher",
+    "car1": {
+      "price": 34.99,
+      "available_quantity": 5,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "Monster Trucks",
+      "seller": {
+        "name": "Big Wheels Toys",
+        "email": "bigwheels@example.com"
+      },
+      "rating": 4.0
+    },
+    "car2": {
+      "price": 34.99,
+      "available_quantity": 5,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "Monster Trucks",
+      "seller": {
+        "name": "Big Wheels Toys",
+        "email": "bigwheels@example.com"
+      },
+      "rating": 4.0
+    },
+    "car3": {
+      "price": 34.99,
+      "available_quantity": 5,
+      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
+      "category": "Vehicles",
+      "subcategory": "Monster Trucks",
+      "seller": {
+        "name": "Big Wheels Toys",
+        "email": "bigwheels@example.com"
+      },
+      "rating": 4.0
+    }
+  }
+]

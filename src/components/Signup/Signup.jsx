@@ -35,25 +35,31 @@ const Signup = () => {
                   <i className="login__icon">
                     <FaUser></FaUser>
                   </i>
-                  <input type="text" name="name" className="login__input" placeholder=" Name" />
+                  <input type="text" required name="name" className="login__input" placeholder=" Name" />
                 </div>
                 <div className="login__field">
                   <i className="login__icon">
                     <FaRegEnvelope></FaRegEnvelope>
                   </i>
-                  <input type="text" name="email" className="login__input" placeholder=" Email" />
+                  <input type="text" required name="email" className="login__input" placeholder=" Email" />
                 </div>
                 <div className="login__field">
                   <i className="login__icon">
                     <FaLock></FaLock>
                   </i>
-                  <input type="password" name="password" className="login__input" placeholder="Password" />
+                  <input
+                    type="password"
+                    required
+                    name="password"
+                    className="login__input"
+                    placeholder="Password"
+                  />
                 </div>
                 <div className="login__field">
                   <i className="login__icon">
                     <FaUser></FaUser>
                   </i>
-                  <input type="text" name="photo" className="login__input" placeholder="Photo URL" />
+                  <input type="text" required name="photo" className="login__input" placeholder="Photo URL" />
                 </div>
                 <button className="button login__submit">
                   <input className="button__text" type="submit" value="SIGN UP NOW" />

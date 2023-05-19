@@ -37,19 +37,27 @@ const NavigationBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li tabIndex={0}>
-                <a>All Toys</a>
+                <Link to="/allToys">All Toys</Link>
               </li>
+              {user ? (
+                <li>
+                  <Link to="/myToys">My Toys</Link>
+                </li>
+              ) : (
+                ""
+              )}
+              {user ? (
+                <li>
+                  <Link to="/addToy">Add A Toy</Link>
+                </li>
+              ) : (
+                ""
+              )}
               <li>
-                <a>My Toys</a>
-              </li>
-              <li>
-                <a>Add A Toy</a>
-              </li>
-              <li>
-                <a>Blogs</a>
+                <Link to="/blog">Blog</Link>
               </li>
             </ul>
           </div>

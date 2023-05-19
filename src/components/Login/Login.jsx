@@ -1,11 +1,15 @@
 import React, { useContext } from "react";
 import "./Login.css";
 import { FaFacebook, FaGithub, FaGoogle, FaLock, FaRegEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+
   const handleLogin = (event) => {
     event.preventDefault();
 
@@ -18,6 +22,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        navigate(from);
       })
       .catch((error) => console.log(error));
   };
@@ -34,14 +39,20 @@ const Login = () => {
                     {" "}
                     <FaRegEnvelope></FaRegEnvelope>
                   </i>
-                  <input type="text" name="email" className="login__input" placeholder=" Email" />
+                  <input type="text" required name="email" className="login__input" placeholder=" Email" />
                 </div>
                 <div className="login__field">
                   <i className="login__icon">
                     {" "}
                     <FaLock></FaLock>
                   </i>
-                  <input type="password" name="password" className="login__input" placeholder="Password" />
+                  <input
+                    type="password"
+                    required
+                    name="password"
+                    className="login__input"
+                    placeholder="Password"
+                  />
                 </div>
                 <button className="button login__submit">
                   <input className="button__text" type="submit" value="LOG IN NOW" />
