@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const AllCarDetails = ({ toy }) => {
-  // console.log(toy._id);
   const { _id } = toy;
+
   return (
     <tr>
       <th>
-        <button onClick={() => handleDelete(_id)} className="btn btn-sm btn-circle">
+        <button className="btn btn-sm btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

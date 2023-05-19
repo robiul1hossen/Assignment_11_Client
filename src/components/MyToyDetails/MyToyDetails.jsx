@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MyToyDetails = ({ toy }) => {
-  const { _id } = toy;
+const MyToyDetails = ({ toy, handleDelete }) => {
+  const { _id, subcategory, price, available_quantity, img } = toy;
+  console.log(_id);
+
   return (
     <tr>
       <th>
@@ -21,7 +23,7 @@ const MyToyDetails = ({ toy }) => {
       <td>
         <div className="avatar">
           <div className="rounded w-24 h-24">
-            <img src={toy.img} />
+            <img src={img} />
           </div>
         </div>
         <div>
@@ -29,9 +31,9 @@ const MyToyDetails = ({ toy }) => {
           <div className="text-sm opacity-50">United States</div>
         </div>
       </td>
-      <td>{toy.subcategory}</td>
-      <td>{toy.price}</td>
-      <td>{toy.available_quantity}</td>
+      <td>{subcategory}</td>
+      <td>{price}</td>
+      <td>{available_quantity}</td>
       <th>
         <Link to={`/allToys/${_id}`}>
           <button className="btn btn-primary btn-md">Details</button>
