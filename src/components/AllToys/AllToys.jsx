@@ -4,7 +4,6 @@ import AllCarDetails from "../AllCarDetails/AllCarDetails";
 
 const AllToys = () => {
   const allToys = useLoaderData();
-  console.log(allToys);
   return (
     <table className="table w-full">
       {/* head */}
@@ -16,7 +15,7 @@ const AllToys = () => {
             </label>
           </th>
           <th>Image </th>
-          <th>Category</th>
+          <th>Sub Category</th>
           <th>Price</th>
           <th>Quantity</th>
           <th>Details</th>

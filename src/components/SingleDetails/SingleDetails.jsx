@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 
 const SingleDetails = () => {
   const data = useLoaderData();
-  console.log(data);
   const { category, price, available_quantity, img, rating, sellerName, sellerEmail, subcategory } = data;
   return (
     <>

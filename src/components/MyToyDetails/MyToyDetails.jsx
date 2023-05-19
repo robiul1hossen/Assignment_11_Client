@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AllCarDetails = ({ toy }) => {
-  // console.log(toy._id);
+const MyToyDetails = ({ toy }) => {
   const { _id } = toy;
   return (
     <tr>
@@ -42,4 +41,7 @@ const AllCarDetails = ({ toy }) => {
   );
 };
 
-export default AllCarDetails;
+export default MyToyDetails;
+{
+  MyToyDetails;
+}
