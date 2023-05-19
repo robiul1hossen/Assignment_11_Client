@@ -13,7 +13,7 @@ const SingleDetails = () => {
         </div>
         <div className="flex h-full items-center w-full">
           <div className="space-y-2">
-            <p className="font-semibold"> {category}</p>
+            <p className="font-semibold"> {subcategory}</p>
             <p>
               price: <b>${price}</b>
             </p>

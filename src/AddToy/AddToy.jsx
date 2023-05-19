@@ -7,25 +7,38 @@ const AddToy = () => {
     event.preventDefault();
 
     const form = event.target;
-    const name = form.name.value;
-    const date = form.date.value;
-    const email = user?.email;
+    const sellerName = form.name.value;
+    const available_quantity = form.date.value;
+    const price = form.price.value;
+    const subcategory = form.category.value;
+    const img = form.toyPhoto.value;
+    const rating = form.rating.value;
+    const sellerEmail = user?.email;
 
     const toy = {
-      customerName: name,
-      date,
-      email,
+      subcategory,
+      sellerName,
+      available_quantity,
+      sellerEmail,
       img,
-      service: title,
-      serviceId: _id,
-      price: price,
+      price,
+      rating,
     };
     console.log(toy);
+
+    fetch("http://localhost:5000/allToys", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(toy),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
     <div>
-      <h2>Add a toy</h2>
       <form onSubmit={handleAddToy}>
         <div className="card-body">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -33,19 +46,13 @@ const AddToy = () => {
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
-              <input
-                type="text"
-                placeholder="Name"
-                defaultValue={user?.name}
-                name="name"
-                className="input input-bordered"
-              />
+              <input type="text" placeholder="Name" name="name" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Date </span>
+                <span className="label-text">Quantity </span>
               </label>
-              <input type="date" name="date" className="input input-bordered" />
+              <input type="text" placeholder="Quantity" name="date" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
@@ -55,9 +62,27 @@ const AddToy = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Due Amount</span>
+                <span className="label-text">Price</span>
               </label>
               <input type="text" defaultValue="price" name="price" className="input input-bordered" />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Category</span>
+              </label>
+              <input type="text" placeholder="Category" name="category" className="input input-bordered" />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Rating</span>
+              </label>
+              <input type="text" placeholder="Rating" name="rating" className="input input-bordered" />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Toy Photo</span>
+              </label>
+              <input type="text" placeholder="Photo" name="toyPhoto" className="input input-bordered" />
             </div>
           </div>
           <div className="form-control mt-6">
