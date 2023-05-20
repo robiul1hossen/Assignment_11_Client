@@ -12,7 +12,7 @@ const ShopByCategories = () => {
     setActiveTab(tabName);
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/filter/${subcategory}`)
+    fetch(`https://mini-motors-server.vercel.app/filter/${subcategory}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

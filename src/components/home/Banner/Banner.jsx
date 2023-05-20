@@ -13,12 +13,12 @@ const Banner = () => {
         />
 
         <div className="banner-text rounded-xl absolute top-0 left-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)] border w-full text-white h-full">
-          <div className="flex justify-center items-center h-full">
-            <div className="space-y-4">
-              <p className="text-3xl">TOP BRANDS 2023</p>
-              <h4 className="font-semibold text-5xl">MODERN-CLASSIC</h4>
-              <h2 className="font-bold text-7xl">INCREDIBLE </h2>
-              <p>
+          <div className="flex ms-4 lg:justify-center items-center h-full">
+            <div className="lg:space-y-4">
+              <p className="gl:text-3xl">TOP BRANDS 2023</p>
+              <h4 className="font-semibold text-xl lg:text-5xl">MODERN-CLASSIC</h4>
+              <h2 className="font-bold text-2xl lg:text-7xl">INCREDIBLE </h2>
+              <p className="hidden lg:block">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam <br /> molestias esse totam ipsum
                 nisi? Ad quisquam harum libero <br /> sed soluta. Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Minima, earum?
