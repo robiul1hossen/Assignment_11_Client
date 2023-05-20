@@ -13,6 +13,8 @@ const AddToy = () => {
     const subcategory = form.category.value;
     const img = form.toyPhoto.value;
     const rating = form.rating.value;
+    const toy_details = form.toy_details.value;
+    const seller_details = form.seller_details.value;
     const sellerEmail = user?.email;
 
     const toy = {
@@ -23,6 +25,8 @@ const AddToy = () => {
       img,
       price,
       rating,
+      toy_details,
+      seller_details,
     };
     console.log(toy);
 
@@ -86,6 +90,28 @@ const AddToy = () => {
                 <span className="label-text">Toy Photo</span>
               </label>
               <input type="text" placeholder="Photo" name="toyPhoto" className="input input-bordered" />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Toy Details</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Toy Details"
+                name="toy_details"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Seller Details</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Seller Details"
+                name="seller_details"
+                className="input input-bordered"
+              />
             </div>
           </div>
           <div className="form-control mt-6">

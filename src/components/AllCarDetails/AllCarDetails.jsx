@@ -31,7 +31,7 @@ const AllCarDetails = ({ toy }) => {
         </div>
       </td>
       <td>{toy.subcategory}</td>
-      <td>{toy.price}</td>
+      <td>${toy.price}</td>
       <td>{toy.available_quantity}</td>
       <th>
         <Link to={`/allToys/${_id}`}>

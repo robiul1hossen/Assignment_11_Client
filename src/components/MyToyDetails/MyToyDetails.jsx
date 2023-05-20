@@ -32,7 +32,7 @@ const MyToyDetails = ({ toy, handleDelete }) => {
         </div>
       </td>
       <td>{subcategory}</td>
-      <td>{price}</td>
+      <td>${price}</td>
       <td>{available_quantity}</td>
       <th>
         <Link to={`/allToys/${_id}`}>

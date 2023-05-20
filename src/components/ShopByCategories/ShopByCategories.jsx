@@ -17,7 +17,7 @@ const ShopByCategories = () => {
       <h2 className="font-bold text-3xl my-5">Shop by category</h2>
       {/* <h2>toy : {toy[0].name}</h2> */}
       {toys.map((toy) => (
-        <CategoryShop toy={toy}></CategoryShop>
+        <CategoryShop toy={toy} key={toy._id}></CategoryShop>
       ))}
 
       <Tabs>

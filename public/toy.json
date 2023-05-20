@@ -1,119 +1,79 @@
 [
   {
-    "name": "Super Racer",
-    "car1": {
-      "price": 24.99,
-      "available_quantity": 15,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "Cars",
-      "seller": {
-        "name": "Carland Toys",
-        "email": "carlandtoys@example.com"
-      },
-      "rating": 4.2
-    },
-    "car2": {
-      "price": 24.99,
-      "available_quantity": 15,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "Cars",
-      "seller": {
-        "name": "Carland Toys",
-        "email": "carlandtoys@example.com"
-      },
-      "rating": 4.2
-    },
-    "car3": {
-      "price": 24.99,
-      "available_quantity": 15,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "Cars",
-      "seller": {
-        "name": "Carland Toys",
-        "email": "carlandtoys@example.com"
-      },
-      "rating": 4.2
-    }
+    "price": 19.99,
+    "img": "https://i.ibb.co/fXfcWCX/nick-xc-Rt6-KM5s04-unsplash.jpg",
+    "sellerName": "Fahim Saleh",
+    "sellerEmail": "speedytoys@example.com",
+    "available_quantity": 10,
+    "subcategory": "Turbo Speedster",
+    "rating": 3.8,
+    "toy_details": "The Turbo Speedster is an exhilarating remote-controlled car designed for speed enthusiasts. With its sleek design and powerful motor, this RC car can reach impressive speeds on various surfaces. It features responsive controls for precise maneuvering and thrilling racing experiences. The Turbo Speedster is perfect for both beginners and experienced RC car enthusiasts. With a rating of 3.8, it offers an exciting balance of performance and affordability. Hurry up and grab this exciting Turbo Speedster, as there are only 10 units available.",
+    "seller_details": "Fahim Saleh is a trusted seller of high-quality toys, specializing in RC cars. With a wide range of products and excellent customer service, Fahim ensures customer satisfaction. You can contact Fahim at speedytoys@example.com for any inquiries or assistance regarding the Turbo Speedster or other toys available."
   },
   {
-    "name": "Turbo Speedster",
-    "car1": {
-      "price": 19.99,
-      "available_quantity": 10,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "RC Cars",
-      "seller": {
-        "name": "Speedy Toys",
-        "email": "speedytoys@example.com"
-      },
-      "rating": 3.8
-    },
-    "car2": {
-      "price": 19.99,
-      "available_quantity": 10,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "RC Cars",
-      "seller": {
-        "name": "Speedy Toys",
-        "email": "speedytoys@example.com"
-      },
-      "rating": 3.8
-    },
-    "car3": {
-      "price": 19.99,
-      "available_quantity": 10,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "RC Cars",
-      "seller": {
-        "name": "Speedy Toys",
-        "email": "speedytoys@example.com"
-      },
-      "rating": 3.8
-    }
+    "price": 29.99,
+    "img": "https://i.ibb.co/Z8v7Pr6/gimmel-magaway-h-CIPLW9-Cl-Og-unsplash.jpg",
+    "sellerName": "Abu Salek",
+    "sellerEmail": "monstertoys@example.com",
+    "available_quantity": 8,
+    "subcategory": "Monster Trucks",
+    "rating": 4.5,
+    "toy_details": "Get ready for some monster-sized fun with the Monster Trucks! These rugged and powerful RC trucks are built to conquer any terrain. With their large wheels and robust suspension, they can handle jumps, obstacles, and rough surfaces with ease. The Monster Trucks are perfect for off-road adventures and thrilling stunts. With a rating of 4.5, they deliver high performance and excitement. Grab one now and experience the thrill of monster truck action!",
+    "seller_details": "Abu Salek is a reputable seller specializing in monster trucks and off-road toys. With a passion for delivering quality products, Abu Salek ensures customer satisfaction. You can reach out to Abu Salek at monstertoys@example.com for any inquiries or assistance regarding the Monster Trucks or other toys available."
   },
   {
-    "name": "Monster Crusher",
-    "car1": {
-      "price": 34.99,
-      "available_quantity": 5,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "Monster Trucks",
-      "seller": {
-        "name": "Big Wheels Toys",
-        "email": "bigwheels@example.com"
-      },
-      "rating": 4.0
-    },
-    "car2": {
-      "price": 34.99,
-      "available_quantity": 5,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "Monster Trucks",
-      "seller": {
-        "name": "Big Wheels Toys",
-        "email": "bigwheels@example.com"
-      },
-      "rating": 4.0
-    },
-    "car3": {
-      "price": 34.99,
-      "available_quantity": 5,
-      "img": "https://i.ibb.co/vqJ3q5S/haseeb-modi-Da-F4-Fo-Y0a-KA-unsplash.jpg",
-      "category": "Vehicles",
-      "subcategory": "Monster Trucks",
-      "seller": {
-        "name": "Big Wheels Toys",
-        "email": "bigwheels@example.com"
-      },
-      "rating": 4.0
-    }
+    "price": 31.99,
+    "img": "https://i.ibb.co/vhxjc4H/uday-tadphale-Cw-Mg-Shbz-Brc-unsplash.jpg",
+    "sellerName": "Dostogir",
+    "sellerEmail": "adventurewalker@example.com",
+    "available_quantity": 20,
+    "subcategory": "Off-Road",
+    "rating": 4.9,
+    "toy_details": "Embark on thrilling off-road adventures with the Off-Road Explorer! This rugged RC car is designed to conquer rough terrains, including dirt, gravel, and rocky surfaces. With its durable construction and powerful motor, it can handle any outdoor challenge. The Off-Road Explorer features impressive traction and suspension for superior performance. With a rating of 4.9, it guarantees top-notch off-road capabilities. Get ready to explore the wilderness with this incredible toy!",
+    "seller_details": "Dostogir is a trusted seller specializing in off-road toys and adventure gear. With a commitment to quality and customer satisfaction, Dostogir ensures that every product meets high standards. For any inquiries or assistance regarding the Off-Road Explorer or other adventurous toys, contact Dostogir at adventurewalker@example.com."
+  },
+  {
+    "price": 26.99,
+    "img": "https://i.ibb.co/ykYDGTN/chris-king-Vq-Lyo-Rjhiss-unsplash.jpg",
+    "sellerName": "Faruk Hasan",
+    "sellerEmail": "drifttoys@example.com",
+    "available_quantity": 6,
+    "subcategory": "Drift Cars",
+    "rating": 4,
+    "toy_details": "Experience the thrill of drifting with the Drift Cars! These high-performance RC cars are designed for sideways action and precise control. With their slick tires, adjustable suspension, and responsive steering, they excel in executing drift maneuvers. The Drift Cars are perfect for racing and performing stylish drifts. With a rating of 4, they provide an exciting and dynamic driving experience. Get ready to unleash your drifting skills with these incredible cars!",
+    "seller_details": "Faruk Hasan is an experienced seller specializing in drift toys and RC cars. With a deep knowledge of the drifting culture, Faruk Hasan offers top-notch products and exceptional customer service. If you have any questions or need assistance, feel free to reach out to Faruk Hasan at drifttoys@example.com."
+  },
+  {
+    "price": 29.99,
+    "img": "https://i.ibb.co/2NMbqTJ/haseeb-modi-AU3o-Ye-Ek-W7k-unsplash.jpg",
+    "sellerName": "Badsha Harun",
+    "sellerEmail": "citytoys@example.com",
+    "available_quantity": 5,
+    "subcategory": "Police Cars",
+    "rating": 4.3,
+    "toy_details": "Join the police force with the Police Pursuit toys! These RC cars feature an authentic police car design and are equipped with sirens and flashing lights. Race through the streets, chasing down criminals and maintaining law and order. The Police Pursuit toys offer thrilling police car action and are perfect for imaginative play. With a rating of 4.3, they combine excitement and law enforcement role-play. Take control of the streets with these fantastic police cars!",
+    "seller_details": "Badsha Harun is a trusted seller specializing in police-themed toys and RC cars. With a wide range of products, Badsha Harun ensures customer satisfaction. If you have any inquiries or need assistance regarding the Police Pursuit toys or other city-themed toys, contact Badsha Harun at citytoys@example.com."
+  },
+  {
+    "price": 49.99,
+    "img": "https://i.ibb.co/T1jtGWq/sandy-millar-nu-S2-GDp-CDo-I-unsplash.jpg",
+    "sellerName": "Mr Harun",
+    "sellerEmail": "raceworld@example.com",
+    "available_quantity": 2,
+    "subcategory": "Formula Cars",
+    "rating": 4.6,
+    "toy_details": "Experience the thrill of Formula racing with the Formula Racer! This high-speed RC car is designed to resemble the sleek and powerful Formula cars seen on professional racetracks. With its aerodynamic design, advanced features, and responsive controls, it delivers an authentic racing experience. The Formula Racer is perfect for racing enthusiasts and those who appreciate the precision of Formula cars. With a rating of 4.6, it guarantees an adrenaline-pumping racing experience. Get ready to take the checkered flag with this incredible toy!",
+    "seller_details": "Mr Harun is a dedicated seller specializing in racing toys and RC cars. With a passion for speed and performance, Mr Harun offers top-quality products and excellent customer service. For any inquiries or assistance regarding the Formula Racer or other racing toys, contact Mr Harun at raceworld@example.com."
+  },
+  {
+    "price": 21.99,
+    "img": "https://i.ibb.co/tYX5Tn8/gustavo-S-W9v-DL5wh-U-unsplash.jpg",
+    "sellerName": "Mr Bai",
+    "sellerEmail": "classictoys@example.com",
+    "available_quantity": 9,
+    "subcategory": "Classic Cars",
+    "rating": 4.4,
+    "toy_details": "Take a trip down memory lane with the Classic Cruiser! These RC cars feature a vintage design inspired by classic automobiles of the past. With their elegant curves, chrome accents, and attention to detail, they capture the essence of timeless beauty. The Classic Cruiser is perfect for collectors and those who appreciate vintage cars. With a rating of 4.4, they offer a delightful blend of nostalgia and RC car excitement. Grab one now and experience the charm of classic cars!",
+    "seller_details": "Mr Bai is a reputable seller specializing in classic toys and collectibles. With a passion for preserving nostalgia, Mr Bai offers a wide range of classic-themed products. For any inquiries or assistance regarding the Classic Cruiser or other classic toys, contact Mr Bai at classictoys@example.com."
   }
 ]

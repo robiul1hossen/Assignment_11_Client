@@ -3,7 +3,17 @@ import { useLoaderData } from "react-router-dom";
 
 const SingleDetails = () => {
   const data = useLoaderData();
-  const { category, price, available_quantity, img, rating, sellerName, sellerEmail, subcategory } = data;
+  const {
+    toy_details,
+    seller_details,
+    price,
+    available_quantity,
+    img,
+    rating,
+    sellerName,
+    sellerEmail,
+    subcategory,
+  } = data;
   return (
     <>
       <div className="grid grid-cols-2 gap-10">
@@ -24,25 +34,14 @@ const SingleDetails = () => {
             <h2 className="font-semibold">Seller Name : {sellerEmail}</h2>
 
             <p>
-              <b>Seller Details :</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum fugit
-              voluptas id saepe! Quo voluptatum debitis, similique repellendus, a saepe placeat perferendis
-              veritatis asperiores quaerat porro! Perferendis, cum iure maxime atque magni, ducimus reiciendis
-              similique, saepe nihil corporis architecto voluptate!{" "}
+              <b>Seller Details :</b> {seller_details}
             </p>
           </div>
         </div>
       </div>
       <div className="my-10">
         <p>
-          <b>Toy Details :</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quae dolor,
-          cum odio sint blanditiis aspernatur libero omnis expedita temporibus dicta aperiam tempora
-          laboriosam ex iure? Similique, fugiat obcaecati dolores magni omnis quasi delectus dolorum ut cumque
-          voluptate laborum aliquam deserunt ex expedita animi eum incidunt natus repellendus maxime id et
-          facilis temporibus itaque. Provident voluptatem atque repellat vitae hic molestiae maxime quae
-          accusantium. Esse natus odio provident et explicabo saepe dolorum aliquam, eum, voluptate
-          repudiandae earum sit quae exercitationem voluptatibus officia doloribus perferendis? Non
-          consequatur ad nostrum distinctio amet ex porro et cupiditate! Temporibus possimus aperiam omnis
-          voluptatibus commodi.
+          <b>Toy Details :</b> {toy_details}
         </p>
       </div>
     </>
