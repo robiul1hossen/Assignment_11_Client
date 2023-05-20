@@ -15,6 +15,7 @@ import UpdateToy from "./components/UpdateToy/UpdateToy.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./components/ProvateRoute/PrivateRoute.jsx";
 import SingleDetails from "./components/SingleDetails/SingleDetails.jsx";
+import Error from "./components/Error/Error.jsx";
 
 const router = createBrowserRouter([
   {
@@ -74,9 +75,13 @@ const router = createBrowserRouter([
             <UpdateToy></UpdateToy>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/allToy/${params.id}`),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
   },
 ]);
 

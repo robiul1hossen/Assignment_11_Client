@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const AddToy = () => {
   const { _id, price, available_quantity } = useLoaderData();
+  console.log(_id);
 
   const handleUpdateToy = (event) => {
     event.preventDefault();
@@ -18,7 +19,7 @@ const AddToy = () => {
     };
     console.log(toy);
 
-    fetch(`http://localhost:5000/toy/${_id}`, {
+    fetch(`http://localhost:5000/allToy/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(toy),
