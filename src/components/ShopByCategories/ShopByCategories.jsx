@@ -5,41 +5,48 @@ import CategoryShop from "./CategoryShop/CategoryShop";
 
 const ShopByCategories = () => {
   const [toys, setToys] = useState([]);
-
+  console.log(toys);
+  const [activeTab, setActiveTab] = useState("monsterTruck");
+  const [subcategory, setSubcategory] = useState("");
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
   useEffect(() => {
-    fetch("toy.json")
+    fetch(`http://localhost:5000/filter/${subcategory}`)
       .then((res) => res.json())
-      .then((data) => setToys(data));
+      .then((data) => {
+        console.log(data);
+        setToys(data);
+      });
   }, []);
 
   return (
     <div className="my-10">
-      <h2 className="font-bold text-3xl my-5">Shop by category</h2>
-      {/* <h2>toy : {toy[0].name}</h2> */}
-      {toys.map((toy) => (
-        <CategoryShop toy={toy} key={toy._id}></CategoryShop>
-      ))}
+      <h2 className="font-bold text-3xl my-5 ">Shop by category</h2>
 
-      <Tabs>
-        <TabList>
-          <Tab>3</Tab>
-          <Tab>2</Tab>
-          <Tab>1</Tab>
-        </TabList>
-
-        <TabPanel>
-          <img className="w-1/2" src="" alt="" />
-        </TabPanel>
-        <TabPanel>
-          <h2>Any content 2</h2>
-        </TabPanel>
-        <TabPanel>
-          <h2>Any content 3</h2>
-        </TabPanel>
-        <TabPanel>
-          <h2>Any content 4</h2>
-        </TabPanel>
-      </Tabs>
+      <div className=" flex justify-center gap-5 items-center">
+        <div
+          onClick={() => handleTabClick("monsterTruck")}
+          className={`${activeTab == "monsterTruck" ? "bg-secondary text-white font-semibold p-2" : ""}`}
+        >
+          Monster Truck
+        </div>
+        <div
+          onClick={() => handleTabClick("policeCar")}
+          className={`${activeTab == "policeCar" ? "bg-secondary  text-white font-semibold p-2" : ""}`}
+        >
+          Police Car
+        </div>
+        <div
+          onClick={() => handleTabClick("classicCar")}
+          className={`${activeTab == "classicCar" ? "bg-secondary  text-white font-semibold p-2" : ""}`}
+        >
+          Classic Car
+        </div>
+        {toys?.map((toy) => (
+          <CategoryShop toy={toy} key={toy._id}></CategoryShop>
+        ))}
+      </div>
     </div>
   );
 };

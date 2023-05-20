@@ -48,6 +48,8 @@ const Banner = () => {
         <img src="https://i.ibb.co/ykYDGTN/chris-king-Vq-Lyo-Rjhiss-unsplash.jpg" alt="" />
       </div>
       <ShopByCategories></ShopByCategories>
+      {/* Clients Words */}
+      <div></div>
     </div>
   );
 };

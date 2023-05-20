@@ -1,0 +1,13 @@
+.main-div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.main-div .display-name {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main-div:hover .display-name {
+  opacity: 1;
+}

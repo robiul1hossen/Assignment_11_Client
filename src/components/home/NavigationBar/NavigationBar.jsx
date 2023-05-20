@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./NavigationBar.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
@@ -92,22 +93,26 @@ const NavigationBar = () => {
         </div>
         {user ? (
           <>
-            {" "}
-            {
-              <img
-                className="profileImg"
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  lineHeight: "50px",
-                  borderRadius: "50%",
-                  marginRight: "20px",
-                }}
-                src={user?.photoURL}
-                alt=""
-              />
-            }
-            <div className="navbar-end">
+            <div className="navbar-end ">
+              {
+                <>
+                  <div className="main-div">
+                    <p className="display-name">{user.displayName}</p>
+                    <img
+                      className="profileImg ms-auto"
+                      style={{
+                        width: "50px",
+                        height: "50px",
+                        lineHeight: "50px",
+                        borderRadius: "50%",
+                        marginRight: "20px",
+                      }}
+                      src={user?.photoURL}
+                      alt=""
+                    />
+                  </div>
+                </>
+              }
               <Link onClick={handleLogOut} className="btn" to="/login">
                 Log Out
               </Link>

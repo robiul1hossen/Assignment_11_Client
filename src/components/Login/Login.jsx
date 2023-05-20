@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { loginUser, profilePhoto } = useContext(AuthContext);
+  const { loginUser, profilePhoto, handleGoogle, handleGithub } = useContext(AuthContext);
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
@@ -26,6 +26,31 @@ const Login = () => {
       })
       .catch((error) => console.log(error));
     profilePhoto();
+  };
+
+  const googleLogin = () => {
+    handleGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
+        navigate(from, { replace: true });
+        console.log(loggedUser);
+      })
+      .catch((error) => {
+        console.log(error);
+        profilePhoto();
+      });
+  };
+
+  const githubLogin = () => {
+    handleGithub()
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+        profilePhoto();
+      });
   };
 
   return (
@@ -64,13 +89,13 @@ const Login = () => {
               <div className="social-login">
                 <h3>log in via</h3>
                 <div className="social-icons">
-                  <a href="#" className="social-login__icon fab fa-instagram">
+                  <a onClick={googleLogin} href="#" className="social-login__icon fab fa-instagram">
                     <FaGoogle></FaGoogle>
                   </a>
                   <a href="#" className="social-login__icon fab fa-facebook">
                     <FaFacebook></FaFacebook>
                   </a>
-                  <a href="#" className="social-login__icon fab fa-twitter">
+                  <a href="#" onClick={githubLogin} className="social-login__icon fab fa-twitter">
                     <FaGithub></FaGithub>
                   </a>
                 </div>

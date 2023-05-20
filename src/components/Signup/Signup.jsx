@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Signup = () => {
-  const { createUser, profilePhoto } = useContext(AuthContext);
+  const { createUser, profilePhoto, handleGoogle, handleGithub } = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
 
@@ -23,6 +23,31 @@ const Signup = () => {
         profilePhoto(result.user, name, photo);
       })
       .catch((error) => console.log(error));
+  };
+
+  const googleLogin = () => {
+    handleGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
+        navigate(from, { replace: true });
+        console.log(loggedUser);
+      })
+      .catch((error) => {
+        console.log(error);
+        profilePhoto();
+      });
+  };
+
+  const githubLogin = () => {
+    handleGithub()
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+        profilePhoto();
+      });
   };
 
   return (
@@ -71,13 +96,13 @@ const Signup = () => {
               <div className="m-space">
                 <h3>log in via</h3>
                 <div className="social-icons">
-                  <a href="#" className="social-login__icon">
+                  <a onClick={googleLogin} href="#" className="social-login__icon">
                     <FaGoogle></FaGoogle>
                   </a>
                   <a href="#" className="social-login__icon">
                     <FaFacebook></FaFacebook>
                   </a>
-                  <a href="#" className="social-login__icon">
+                  <a onClick={githubLogin} href="#" className="social-login__icon">
                     <FaGithub></FaGithub>
                   </a>
                 </div>

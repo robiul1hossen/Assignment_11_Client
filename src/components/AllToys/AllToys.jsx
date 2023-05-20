@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import AllCarDetails from "../AllCarDetails/AllCarDetails";
 
 const AllToys = () => {
   const allToys = useLoaderData();
-  console.log(allToys);
+
   return (
     <table className="table w-full">
       {/* head */}
