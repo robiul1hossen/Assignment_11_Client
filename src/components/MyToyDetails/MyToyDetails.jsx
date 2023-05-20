@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const MyToyDetails = ({ toy, handleDelete }) => {
   const { _id, subcategory, price, available_quantity, img } = toy;
-  console.log(_id);
 
   return (
     <tr>
@@ -34,6 +33,11 @@ const MyToyDetails = ({ toy, handleDelete }) => {
       <td>{subcategory}</td>
       <td>${price}</td>
       <td>{available_quantity}</td>
+      <th>
+        <Link to={`/updateToy/${_id}`}>
+          <button className="btn btn-primary btn-md">Update</button>
+        </Link>
+      </th>
       <th>
         <Link to={`/allToys/${_id}`}>
           <button className="btn btn-primary btn-md">Details</button>

@@ -10,7 +10,8 @@ import Banner from "./components/home/Banner/Banner.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import AllToys from "./components/AllToys/AllToys.jsx";
 import MyToys from "./components/MyToys/MyToys.jsx";
-import AddToy from "./AddToy/AddToy.jsx";
+import AddToy from "./components/AddToy/AddToy.jsx";
+import UpdateToy from "./components/UpdateToy/UpdateToy.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./components/ProvateRoute/PrivateRoute.jsx";
 import SingleDetails from "./components/SingleDetails/SingleDetails.jsx";
@@ -65,6 +66,15 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`),
+      },
+      {
+        path: "/updateToy/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateToy></UpdateToy>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`),
       },
     ],
   },
