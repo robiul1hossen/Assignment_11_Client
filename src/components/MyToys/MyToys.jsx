@@ -8,8 +8,13 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   useTitle("My Toys");
   const [myToys, setMyToys] = useState([]);
+  const [sort, setSort] = useState(1);
+  const handleSort = () => {
+    setSort((prevSort) => (prevSort === 1 ? -1 : 1));
+  };
+  console.log(sort);
 
-  const url = `https://mini-motors-server.vercel.app/allToy?sellerEmail=${user.email}&sort=price`;
+  const url = `https://mini-motors-server.vercel.app/allToy?sellerEmail=${user.email}&price=${sort}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -51,6 +56,11 @@ const MyToys = () => {
 
   return (
     <div>
+      <div className="text-center my-6">
+        <button className="btn btn-outline " onClick={handleSort}>
+          {sort === 1 ? "Sort by Price (Asc)" : "Sort by Price (Desc)"}
+        </button>
+      </div>
       <table className="table w-full">
         {/* head */}
         <thead>
