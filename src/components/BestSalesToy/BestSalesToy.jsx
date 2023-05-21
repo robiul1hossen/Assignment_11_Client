@@ -2,7 +2,7 @@ import React from "react";
 
 const BestSalesToy = () => {
   return (
-    <>
+    <div className="bg-base-200 py-2 mt-40">
       <h2 className="font-semibold text-4xl text-center mt-36">Top 10 Best sales toys in our shop...</h2>
       <p className="w-1/2 mx-auto mb-9 mt-2">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores porro minima dolorem modi quo est
@@ -42,7 +42,7 @@ const BestSalesToy = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
