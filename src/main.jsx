@@ -77,6 +77,10 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) => fetch(`https://mini-motors-server.vercel.app/allToy/${params.id}`),
       },
+      {
+        path: "*",
+        element: <Error></Error>,
+      },
     ],
   },
   {

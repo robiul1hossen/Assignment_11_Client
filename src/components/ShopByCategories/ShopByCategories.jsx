@@ -11,18 +11,10 @@ const ShopByCategories = () => {
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
-  useEffect(() => {
-    fetch(`https://mini-motors-server.vercel.app/filter/${subcategory}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setToys(data);
-      });
-  }, []);
 
   return (
     <div className="my-10">
-      <h2 className="font-bold text-3xl my-5 ">Shop by category</h2>
+      <h2 className="font-bold text-center text-3xl my-5 ">Shop by category</h2>
 
       <div className=" flex justify-center gap-5 items-center">
         <div

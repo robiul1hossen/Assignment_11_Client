@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
-    <div className="w-full mt-5">
+    <div className="w-full mt-10">
+      <Link to="/">
+        <button className="btn btn-outline my-3"> back to home</button>
+      </Link>
       <img
         className="w-full"
         style={{ height: "90vh" }}

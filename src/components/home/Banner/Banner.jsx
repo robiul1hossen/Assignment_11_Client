@@ -1,6 +1,8 @@
 import React from "react";
 import "./banner.css";
 import ShopByCategories from "../../ShopByCategories/ShopByCategories";
+import ClientReview from "../../ClientReview/ClientReview";
+import BestSalesToy from "../../BestSalesToy/BestSalesToy";
 
 const Banner = () => {
   return (
@@ -30,7 +32,11 @@ const Banner = () => {
       </div>
       {/* Gallery section */}
       <div>
-        <h1 className="font-bold text-7xl text-center mb-10 mt-20">Our toy Gallery</h1>
+        <h1 className="font-bold text-4xl text-center  mt-20">Our toy Gallery</h1>
+        <p className="text-center mb-10 w-1/2 mx-auto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam repellat autem a modi dicta
+          doloribus cumque laborum veniam quisquam!
+        </p>
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <img src="https://i.ibb.co/fXfcWCX/nick-xc-Rt6-KM5s04-unsplash.jpg" alt="" />
@@ -49,6 +55,8 @@ const Banner = () => {
       </div>
       <ShopByCategories></ShopByCategories>
       {/* Clients Words */}
+      <ClientReview></ClientReview>
+      <BestSalesToy></BestSalesToy>
       <div></div>
     </div>
   );
