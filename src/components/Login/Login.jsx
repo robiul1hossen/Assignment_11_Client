@@ -3,12 +3,14 @@ import "./Login.css";
 import { FaFacebook, FaGithub, FaGoogle, FaLock, FaRegEnvelope } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
   const { loginUser, profilePhoto, handleGoogle, handleGithub } = useContext(AuthContext);
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
+  useTitle("Login");
 
   const handleLogin = (event) => {
     event.preventDefault();

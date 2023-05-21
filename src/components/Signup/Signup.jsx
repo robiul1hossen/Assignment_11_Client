@@ -3,9 +3,11 @@ import { FaBeer, FaFacebook, FaGithub, FaGoogle, FaLock, FaRegEnvelope, FaUser }
 import NavigationBar from "../home/NavigationBar/NavigationBar";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const Signup = () => {
   const { createUser, profilePhoto, handleGoogle, handleGithub } = useContext(AuthContext);
+  useTitle("Sign Up");
   const handleRegister = (event) => {
     event.preventDefault();
 

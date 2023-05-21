@@ -14,7 +14,7 @@ const Banner = () => {
 
         <div className="banner-text rounded-xl absolute top-0 left-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)] border w-full text-white h-full">
           <div className="flex ms-4 lg:justify-center items-center h-full">
-            <div className="lg:space-y-4">
+            <div className="lg:space-y-4" data-aos="fade-up-right">
               <p className="gl:text-3xl">TOP BRANDS 2023</p>
               <h4 className="font-semibold text-xl lg:text-5xl">MODERN-CLASSIC</h4>
               <h2 className="font-bold text-2xl lg:text-7xl">INCREDIBLE </h2>

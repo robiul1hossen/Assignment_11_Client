@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import "./NavigationBar.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
-
+import useTitle from "../../../hooks/useTitle";
 const NavigationBar = () => {
   const { logOut, user } = useContext(AuthContext);
+  useTitle("Home");
   const handleLogOut = () => {
     logOut()
       .then(() => {
