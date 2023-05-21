@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
@@ -28,18 +29,23 @@ const AddToy = () => {
       toy_details,
       seller_details,
     };
-    console.log(toy);
 
     fetch("https://mini-motors-server.vercel.app/allToys", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(toy),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          alert("toy added successfully");
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       });
   };
@@ -53,7 +59,13 @@ const AddToy = () => {
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
-              <input type="text" placeholder="Name" name="name" className="input input-bordered" />
+              <input
+                type="text"
+                defaultValue={user?.displayName}
+                placeholder="Name"
+                name="name"
+                className="input input-bordered"
+              />
             </div>
             <div className="form-control">
               <label className="label">
@@ -71,7 +83,7 @@ const AddToy = () => {
               <label className="label">
                 <span className="label-text">Price</span>
               </label>
-              <input type="text" defaultValue="price" name="price" className="input input-bordered" />
+              <input type="text" placeholder="Price" name="price" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">

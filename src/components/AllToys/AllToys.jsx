@@ -4,6 +4,7 @@ import AllCarDetails from "../AllCarDetails/AllCarDetails";
 
 const AllToys = () => {
   const allToys = useLoaderData();
+  console.log(allToys);
   const [query, setQuery] = useState("");
   console.log(query);
 
@@ -19,7 +20,7 @@ const AllToys = () => {
           className="border-2 p-3 my-5"
           type="search"
           name="search"
-          placeholder="search..."
+          placeholder="search a toy..."
           id=""
         />
       </div>

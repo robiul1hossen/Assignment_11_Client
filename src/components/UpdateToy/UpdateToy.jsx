@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const AddToy = () => {
   const { _id, price, available_quantity } = useLoaderData();
@@ -28,7 +29,13 @@ const AddToy = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount > 0) {
-          alert("toy added successfully");
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Update successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       });
   };
