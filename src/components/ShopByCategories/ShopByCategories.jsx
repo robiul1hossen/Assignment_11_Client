@@ -5,6 +5,7 @@ import CategoryShop from "./CategoryShop/CategoryShop";
 const ShopByCategories = () => {
   const [toys, setToys] = useState([]);
   // console.log(toys);
+  // console.log(toys);
   const [activeTab, setActiveTab] = useState("Monster");
   const [subcategory, setSubcategory] = useState("");
   const handleTabClick = (tabName) => {
@@ -25,7 +26,7 @@ const ShopByCategories = () => {
 
       <div className=" flex justify-center gap-5 items-center">
         <div
-          onClick={() => handleTabClick("Monster")}
+          onClick={() => handleTabClick("Monster-Truck")}
           className={`${activeTab == "Monster" ? "bg-secondary text-white font-semibold p-2" : ""}`}
         >
           Monster Truck
