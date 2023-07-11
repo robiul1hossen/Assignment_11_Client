@@ -12,11 +12,17 @@ const MyToys = () => {
   const handleSort = () => {
     setSort((prevSort) => (prevSort === 1 ? -1 : 1));
   };
-  console.log(sort);
+  // console.log(sort);
+  const token = localStorage.getItem("access-token");
+  console.log(token);
 
-  const url = `https://mini-motors-server.vercel.app/allToy?sellerEmail=${user.email}&price=${sort}`;
+  const url = `http://localhost:5000/allToy?sellerEmail=${user.email}&price=${sort}`;
   useEffect(() => {
-    fetch(url)
+    fetch(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -34,7 +40,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://mini-motors-server.vercel.app/allToy/${id}`, {
+        fetch(`http://localhost:5000/allToy/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",

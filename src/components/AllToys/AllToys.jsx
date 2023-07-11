@@ -6,9 +6,7 @@ import useTitle from "../../hooks/useTitle";
 const AllToys = () => {
   const allToys = useLoaderData();
   useTitle("All Toys");
-  console.log(allToys);
   const [query, setQuery] = useState("");
-  console.log(query);
 
   const handleChange = (event) => {
     setQuery(event.target.value);

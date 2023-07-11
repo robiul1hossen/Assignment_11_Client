@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () => fetch(`https://mini-motors-server.vercel.app/allToys`),
+        loader: () => fetch(`http://localhost:5000/allToys`),
       },
       {
         path: "/myToys",
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
             <SingleDetails></SingleDetails>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`https://mini-motors-server.vercel.app/allToys/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`),
       },
       {
         path: "/updateToy/:id",
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
             <UpdateToy></UpdateToy>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`https://mini-motors-server.vercel.app/allToy/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/allToy/${params.id}`),
       },
       {
         path: "*",

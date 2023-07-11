@@ -22,7 +22,7 @@ const AddToy = () => {
     };
     console.log(toy);
 
-    fetch(`https://mini-motors-server.vercel.app/allToy/${_id}`, {
+    fetch(`http://localhost:5000/allToy/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(toy),
