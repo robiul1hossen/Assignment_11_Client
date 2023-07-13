@@ -32,7 +32,7 @@ const AddToy = () => {
       seller_details,
     };
 
-    fetch("http://localhost:5000/allToys", {
+    fetch("https://mini-motors-server-robiul1hossen.vercel.app//allToys", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(toy),

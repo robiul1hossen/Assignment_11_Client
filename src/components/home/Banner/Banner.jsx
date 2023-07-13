@@ -54,7 +54,7 @@ const Banner = () => {
         <img src="https://i.ibb.co/v35M6vz/atish-sewmangel-NYb-Tdr-Bh740-unsplash.jpg" alt="" />
         <img src="https://i.ibb.co/ykYDGTN/chris-king-Vq-Lyo-Rjhiss-unsplash.jpg" alt="" />
       </div>
-      <ShopByCategories></ShopByCategories>
+      {/* <ShopByCategories></ShopByCategories> */}
 
       <ClientReview></ClientReview>
       <BestSalesToy></BestSalesToy>

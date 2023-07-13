@@ -16,7 +16,7 @@ const MyToys = () => {
   const token = localStorage.getItem("access-token");
   console.log(token);
 
-  const url = `http://localhost:5000/allToy?sellerEmail=${user.email}&price=${sort}`;
+  const url = `https://mini-motors-server-robiul1hossen.vercel.app//allToy?sellerEmail=${user.email}&price=${sort}`;
   useEffect(() => {
     fetch(url, {
       headers: {
@@ -40,7 +40,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/allToy/${id}`, {
+        fetch(`https://mini-motors-server-robiul1hossen.vercel.app//allToy/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",

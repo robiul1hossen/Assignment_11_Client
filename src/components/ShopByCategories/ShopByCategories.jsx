@@ -11,7 +11,7 @@
 //     setActiveTab(tabName);
 //   };
 //   useEffect(() => {
-//     fetch(`http://localhost:5000/alltoys`)
+//     fetch(`https://mini-motors-server-robiul1hossen.vercel.app//alltoys`)
 //       .then((res) => res.json())
 //       .then((data) => {
 //         setToys(data);
@@ -80,7 +80,7 @@ const ShopByCategories = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/alltoys`)
+    fetch(`https://mini-motors-server-robiul1hossen.vercel.app//alltoys`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
