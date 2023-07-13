@@ -3,6 +3,7 @@ import "./banner.css";
 // import ShopByCategories from "../../ShopByCategories/ShopByCategories";
 import ClientReview from "../../ClientReview/ClientReview";
 import BestSalesToy from "../../BestSalesToy/BestSalesToy";
+import ShopByCategories from "../../ShopByCategories/ShopByCategories";
 
 const Banner = () => {
   return (
@@ -53,8 +54,8 @@ const Banner = () => {
         <img src="https://i.ibb.co/v35M6vz/atish-sewmangel-NYb-Tdr-Bh740-unsplash.jpg" alt="" />
         <img src="https://i.ibb.co/ykYDGTN/chris-king-Vq-Lyo-Rjhiss-unsplash.jpg" alt="" />
       </div>
-      {/* <ShopByCategories></ShopByCategories> */}
-      {/* Clients Words */}
+      <ShopByCategories></ShopByCategories>
+
       <ClientReview></ClientReview>
       <BestSalesToy></BestSalesToy>
       <div></div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "../Contact/Contact";
+import BestSaler from "../home/Bestsaler/BestSaler";
 
 const BestSalesToy = () => {
   return (
@@ -45,6 +46,7 @@ const BestSalesToy = () => {
           </div>
         </div>
       </div>
+      <BestSaler></BestSaler>
       <Contact></Contact>
     </>
   );
